@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import ErrorBoundary from "../utils/ErrorBoundary";
 import { fetchComments } from "../utils/requests";
+import MyCard from "component-library/packages/my-card";
 import EachComment from "../components/EachComment";
 
 const Comments = () => {
@@ -24,9 +25,9 @@ const Comments = () => {
   const allComments = results.data;
 
   return (
-    <section className="card">
-      <Link to='/posts'>&lt; Back to listing</Link>
-      <h1>Comments for PostID {id}</h1>
+    <MyCard>
+      <Link className="text-wisteria text-500 leading-5 underline mb-lg" to='/posts'>&lt; Back to listing</Link>
+      <h1 className="text-900 leading-9 mb-lg">Comments for PostID {id}</h1>
 
       {!allComments.length ? (
         <h1>No Comments found</h1>
@@ -42,7 +43,7 @@ const Comments = () => {
           );
         })
       )}
-    </section>
+    </MyCard>
   );
 };
 

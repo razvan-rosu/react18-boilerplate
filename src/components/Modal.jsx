@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import MyCard from "component-library/packages/my-card";
 
 const Modal = ({ children }) => {
   const elRef = useRef(null);
@@ -15,7 +16,7 @@ const Modal = ({ children }) => {
     return () => modalRoot.removeChild(elRef.current);
   }, []);
 
-  return createPortal(<section>{children}</section>, elRef.current);
+  return createPortal(<MyCard>{children}</MyCard>, elRef.current);
 };
 
 export default Modal;
