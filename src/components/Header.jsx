@@ -3,22 +3,24 @@ import UserContext from "../utils/UserContext";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../assets/images/logo.svg";
 
+import './Header.css';
+
 const Header = () => {
   const [userInfo] = useContext(UserContext);
 
   return (
-    <header className="header">
-      <div className="container">
+    <header className="Header bg-white">
+      <div className="md:container mx-auto flex justify-between py-md px-lg">
         <Link to="/">
-          <Logo className="logo" />
+          <Logo />
         </Link>
-        <dl>
-          <div>
-            <dt>Username:</dt>
+        <dl className="flex flex-col">
+          <div className="flex">
+            <dt className="mr-sm text-grey-900">Username:</dt>
             <dd>{userInfo.username}</dd>
           </div>
-          <div>
-            <dt>Role:</dt>
+          <div className="flex">
+            <dt className="mr-sm text-grey-900">Role:</dt>
             <dd>{userInfo.role}</dd>
           </div>
         </dl>

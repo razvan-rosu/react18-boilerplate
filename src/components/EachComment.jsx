@@ -2,7 +2,7 @@ const EachComment = (props) => {
   const { name, email, quote } = props;
 
   return (
-    <section className="comment">
+    <section className="Comment mb-lg pb-lg border-b border-grey-300">
       <blockquote className="comment__author">
         {quote}
       </blockquote>

@@ -4,11 +4,11 @@ const EachPost = (props) => {
   const { title, text, id } = props;
 
   return (
-    <section className="post">
+    <section className="Post border-b border-grey-500 pb-md">
       <h3>
-        <Link to={`/posts/${id}`}>{title}</Link>
+        <Link className="text-wisteria underline" to={`/posts/${id}`}>{title}</Link>
       </h3>
-      <p>{text}</p>
+      <p className="text-black">{text}</p>
     </section>
   );
 };

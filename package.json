@@ -2,7 +2,7 @@
   "name": "react18-boilerplate",
   "version": "1.0.0",
   "description": "empty project for building a react18 web application",
-  "main": "index.html",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,23 +24,25 @@
   "license": "ISC",
   "dependencies": {
     "@tanstack/react-query": "^4.24.4",
+    "component-library": "file:../react-monorepository",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "postcss": "^8.4.21",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "postcss": "^8.4.24",
     "prettier": "^2.7.1",
-    "tailwindcss": "^3.2.4",
-    "vite": "^4.1.1",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9",
     "vite-plugin-svgr": "^2.4.0"
   }
 }

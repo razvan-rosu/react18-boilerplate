@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import UserContext from "./utils/UserContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
+import './App.css';
+
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
@@ -30,10 +32,10 @@ const App = () => {
       <BrowserRouter>
         <QueryClientProvider client={queryClient}>
           <UserContext.Provider value={userInfo}>
-            <div className="layout">
+            <div className="min-h-screen flex flex-col bg-grey-300">
               <Header />
               <Navigation />
-              <main className="container">
+              <main className="grow md:container mx-auto py-lg px-0">
                 <Routes>
                   <Route path="/posts/:id" element={<Comments />} />
                   <Route path="/posts" element={<Posts />} />

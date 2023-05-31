@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <nav className="navigation">
-      <div className="container">
-        <ul className="menu">
+    <nav className="Navigation bg-buttercup">
+      <div className="md:container mx-auto">
+        <ul className="flex">
           <li>
-            <Link to="/">Home</Link>
+            <Link className="block py-sm px-md hover:bg-wisteria hover:text-white" to="/">Home</Link>
           </li>
           <li>
-            <Link to="/posts">Posts</Link>
+            <Link className="block py-sm px-md hover:bg-wisteria hover:text-white" to="/posts">Posts</Link>
           </li>
         </ul>
       </div>

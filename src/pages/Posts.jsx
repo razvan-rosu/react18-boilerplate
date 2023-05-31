@@ -1,7 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts } from "../utils/requests";
 
+import MyCard from "component-library/packages/my-card";
 import EachPost from "../components/EachPost";
+
+import './Posts.css';
 
 const Posts = () => {
   const results = useQuery(["posts"], fetchPosts);
@@ -21,12 +24,12 @@ const Posts = () => {
   const allPosts = results.data;
 
   return (
-    <section className="card">
-      <h1>Posts</h1>
-      <ul>
+    <MyCard>
+      <h1 className="text-900 leading-9 mb-lg">Posts</h1>
+      <ul className="List">
         {allPosts.map((item) => {
             return (
-              <li key={item.postId}>
+              <li className="List-item relative mb-lg pl-lg text-meadow" key={`post-${item.postId}`}>
                 <EachPost
                   id={item.id}
                   title={item.title}
@@ -36,14 +39,14 @@ const Posts = () => {
             );
           })
         }
-        <li>
+        <li className="List-item relative mb-lg pl-lg text-meadow" key={"post-1337"}>
           <EachPost
             id={1337}
             title="Post without comments"
             text="This post doesn&apos;t have any comments." />
         </li>
       </ul>
-    </section>
+    </MyCard>
   );
 };
 
