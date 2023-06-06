@@ -14,6 +14,15 @@ This project's sole purpose is to speed up your react app development offering a
 
 ---
 
+## Attention!
+Version 1.1.0 is using components from a local component library.
+You will need to have this [repo](https://github.com/razvan-rosu/react-monorepository) side-by-side with project.
+If you do not want this setup, you can simply remove `component-library` from `package.json` and project files, 
+**OR**
+checkout version 1.0.0
+
+---
+
 ## Installing the project
 > npm install
 
